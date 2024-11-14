@@ -73,22 +73,22 @@ SELECT Id, Nimetus, Kogus, Hind FROM Toode WHERE (Id = @Id)</CommandText>
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="AndmebaasDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="AndmebaasDataSet" msprop:Generator_DataSetName="AndmebaasDataSet">
+  <xs:element name="AndmebaasDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="AndmebaasDataSet" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="AndmebaasDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Toode" msprop:Generator_RowEvHandlerName="ToodeRowChangeEventHandler" msprop:Generator_RowDeletedName="ToodeRowDeleted" msprop:Generator_RowDeletingName="ToodeRowDeleting" msprop:Generator_RowEvArgName="ToodeRowChangeEvent" msprop:Generator_TablePropName="Toode" msprop:Generator_RowChangedName="ToodeRowChanged" msprop:Generator_RowChangingName="ToodeRowChanging" msprop:Generator_TableClassName="ToodeDataTable" msprop:Generator_RowClassName="ToodeRow" msprop:Generator_TableVarName="tableToode" msprop:Generator_UserTableName="Toode">
+        <xs:element name="Toode" msprop:Generator_RowClassName="ToodeRow" msprop:Generator_RowEvHandlerName="ToodeRowChangeEventHandler" msprop:Generator_RowDeletedName="ToodeRowDeleted" msprop:Generator_RowDeletingName="ToodeRowDeleting" msprop:Generator_RowEvArgName="ToodeRowChangeEvent" msprop:Generator_TablePropName="Toode" msprop:Generator_RowChangedName="ToodeRowChanged" msprop:Generator_UserTableName="Toode" msprop:Generator_RowChangingName="ToodeRowChanging" msprop:Generator_TableClassName="ToodeDataTable" msprop:Generator_TableVarName="tableToode">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_UserColumnName="Id" type="xs:int" />
-              <xs:element name="Nimetus" msprop:Generator_ColumnPropNameInRow="Nimetus" msprop:Generator_ColumnPropNameInTable="NimetusColumn" msprop:Generator_ColumnVarNameInTable="columnNimetus" msprop:Generator_UserColumnName="Nimetus">
+              <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnVarNameInTable="columnId" type="xs:int" />
+              <xs:element name="Nimetus" msprop:Generator_UserColumnName="Nimetus" msprop:Generator_ColumnPropNameInTable="NimetusColumn" msprop:Generator_ColumnPropNameInRow="Nimetus" msprop:Generator_ColumnVarNameInTable="columnNimetus">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Kogus" msprop:Generator_ColumnPropNameInRow="Kogus" msprop:Generator_ColumnPropNameInTable="KogusColumn" msprop:Generator_ColumnVarNameInTable="columnKogus" msprop:Generator_UserColumnName="Kogus" type="xs:int" minOccurs="0" />
-              <xs:element name="Hind" msprop:Generator_ColumnPropNameInRow="Hind" msprop:Generator_ColumnPropNameInTable="HindColumn" msprop:Generator_ColumnVarNameInTable="columnHind" msprop:Generator_UserColumnName="Hind" type="xs:double" minOccurs="0" />
+              <xs:element name="Kogus" msprop:Generator_UserColumnName="Kogus" msprop:Generator_ColumnPropNameInTable="KogusColumn" msprop:Generator_ColumnPropNameInRow="Kogus" msprop:Generator_ColumnVarNameInTable="columnKogus" type="xs:int" minOccurs="0" />
+              <xs:element name="Hind" msprop:Generator_UserColumnName="Hind" msprop:Generator_ColumnPropNameInTable="HindColumn" msprop:Generator_ColumnPropNameInRow="Hind" msprop:Generator_ColumnVarNameInTable="columnHind" type="xs:double" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
