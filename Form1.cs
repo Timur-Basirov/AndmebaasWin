@@ -18,6 +18,7 @@ namespace AndmebaasWin
         SqlConnection conn = new SqlConnection(@"Data Source=HP-CZC2349HV2;Initial Catalog=Andmebaas;Integrated Security=True");
         SqlCommand cmd;
         SqlDataAdapter adapter;
+        int Id;
         public Form1()
         {
             InitializeComponent();
@@ -93,7 +94,7 @@ namespace AndmebaasWin
                 {
                     conn.Open();
                     cmd = new SqlCommand("UPDATE Toode SET Nimetus =@toode,Kogus=@kogus,Hind=@hind WHERE Id=@id", conn);
-                    cmd.Parameters.AddWithValue("@id", ID);
+                    cmd.Parameters.AddWithValue("@id", Id);
                     cmd.Parameters.AddWithValue("@toode", Nimetus_txt.Text);
                     cmd.Parameters.AddWithValue("@kogus", Kogus_txt.Text);
                     cmd.Parameters.AddWithValue("@hind", Hind_txt.Text);
@@ -116,11 +117,6 @@ namespace AndmebaasWin
                 MessageBox.Show("Sisesta Andmeid!");
             }
         }
-
-        private void dataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
         OpenFileDialog open;
         SaveFileDialog save;
         private void PildiOtsingBtn_Click(object sender, EventArgs e)
@@ -142,6 +138,23 @@ namespace AndmebaasWin
                     pictureBox1.Image = Image.FromFile(save.FileName);
 
                 }
+            }
+        }
+
+        private void dataGridView1_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            Id = (int)dataGridView1.Rows[e.RowIndex].Cells["Id"].Value;
+            Nimetus_txt.Text = dataGridView1.Rows[e.RowIndex].Cells["Nimetus"].Value.ToString();
+            Nimetus_txt.Text = dataGridView1.Rows[e.RowIndex].Cells["Kogus"].Value.ToString();
+            Nimetus_txt.Text = dataGridView1.Rows[e.RowIndex].Cells["Hind"].Value.ToString();
+            try
+            {
+                pictureBox1.Image = Image.FromFile(Path.Combine(Path.GetFullPath(@"..\..\Pildid"), dataGridView1.Rows[e.RowIndex].Cells["Pilt"].Value.ToString()));
+                pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            }
+            catch (Exception)
+            {
+                pictureBox1.Image = Image.FromFile(Path.Combine(Path.GetFullPath(@"..\..\Pildid"), "pilt.png"));
             }
         }
     }
