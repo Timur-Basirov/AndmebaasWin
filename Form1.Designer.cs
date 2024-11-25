@@ -49,6 +49,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.PildiOtsingBtn = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.Ladu_cb = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.toodeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.andmebaasDataSet)).BeginInit();
@@ -58,7 +60,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(43, 74);
+            this.label1.Location = new System.Drawing.Point(43, 27);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(45, 13);
             this.label1.TabIndex = 0;
@@ -67,42 +69,47 @@
             // 
             // Nimetus_txt
             // 
-            this.Nimetus_txt.Location = new System.Drawing.Point(94, 71);
+            this.Nimetus_txt.Location = new System.Drawing.Point(94, 24);
             this.Nimetus_txt.Name = "Nimetus_txt";
             this.Nimetus_txt.Size = new System.Drawing.Size(100, 20);
             this.Nimetus_txt.TabIndex = 1;
+            this.Nimetus_txt.TextChanged += new System.EventHandler(this.Nimetus_txt_TextChanged);
             // 
             // Kogus_txt
             // 
-            this.Kogus_txt.Location = new System.Drawing.Point(94, 120);
+            this.Kogus_txt.Location = new System.Drawing.Point(94, 73);
             this.Kogus_txt.Name = "Kogus_txt";
             this.Kogus_txt.Size = new System.Drawing.Size(100, 20);
             this.Kogus_txt.TabIndex = 3;
+            this.Kogus_txt.TextChanged += new System.EventHandler(this.Kogus_txt_TextChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(51, 123);
+            this.label2.Location = new System.Drawing.Point(51, 76);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(37, 13);
             this.label2.TabIndex = 2;
             this.label2.Text = "Kogus";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // Hind_txt
             // 
-            this.Hind_txt.Location = new System.Drawing.Point(94, 168);
+            this.Hind_txt.Location = new System.Drawing.Point(94, 111);
             this.Hind_txt.Name = "Hind_txt";
             this.Hind_txt.Size = new System.Drawing.Size(100, 20);
             this.Hind_txt.TabIndex = 5;
+            this.Hind_txt.TextChanged += new System.EventHandler(this.Hind_txt_TextChanged);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(51, 171);
+            this.label3.Location = new System.Drawing.Point(51, 114);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(29, 13);
             this.label3.TabIndex = 4;
             this.label3.Text = "Hind";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // dataGridView1
             // 
@@ -118,6 +125,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(616, 150);
             this.dataGridView1.TabIndex = 6;
+            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             this.dataGridView1.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_RowHeaderMouseClick);
             // 
             // idDataGridViewTextBoxColumn
@@ -216,11 +224,31 @@
             this.button3.Text = "CLEAR";
             this.button3.UseVisualStyleBackColor = true;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(51, 156);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(31, 13);
+            this.label4.TabIndex = 13;
+            this.label4.Text = "Ladu";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
+            // 
+            // Ladu_cb
+            // 
+            this.Ladu_cb.FormattingEnabled = true;
+            this.Ladu_cb.Location = new System.Drawing.Point(94, 153);
+            this.Ladu_cb.Name = "Ladu_cb";
+            this.Ladu_cb.Size = new System.Drawing.Size(100, 21);
+            this.Ladu_cb.TabIndex = 14;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.Ladu_cb);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.PildiOtsingBtn);
             this.Controls.Add(this.pictureBox1);
@@ -268,6 +296,8 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button PildiOtsingBtn;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox Ladu_cb;
     }
 }
 
